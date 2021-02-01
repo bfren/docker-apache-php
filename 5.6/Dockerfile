@@ -6,8 +6,11 @@ LABEL maintainer="Ben Green <ben@bcgdesign.com>" \
     org.label-schema.vendor="Ben Green" \
     org.label-schema.schema-version="1.0"
 
-RUN a2enmod rewrite
-RUN docker-php-ext-install mysql
+RUN \
+    a2enmod rewrite \
+    && docker-php-ext-install mysql \
+    && apt update \
+    && apt install wget
 
 COPY ./overlay /
 
