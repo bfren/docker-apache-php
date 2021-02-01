@@ -10,8 +10,6 @@ Based on [official PHP image](https://hub.docker.com/_/php/) for PHP 5.6.40 with
 
 * [Ports](#ports)
 * [Volumes](#volumes)
-* [Environment Variables](#environment-variables)
-* [Helper Functions](#helper-functions)
 * [Authors / Licence / Copyright](#authors)
 
 ## Ports
