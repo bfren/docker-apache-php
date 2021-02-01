@@ -1,4 +1,4 @@
-# Docker Nginx PHP
+# Docker Apache PHP
 
 ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/bcgdesign/apache-php/latest) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/bencgreen/docker-apache-php/5.6-dev?label=github+7.3) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/bcgdesign/apache-php?label=docker) ![Docker Pulls](https://img.shields.io/docker/pulls/bcgdesign/apache-php?label=pulls) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/bcgdesign/apache-php/latest?label=size)
 
