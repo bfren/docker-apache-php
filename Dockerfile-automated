@@ -8,3 +8,8 @@ LABEL maintainer="Ben Green <ben@bcgdesign.com>" \
 
 RUN a2enmod rewrite
 RUN docker-php-ext-install mysql
+
+COPY ./overlay /
+
+RUN chmod +x /usr/local/bin/healthcheck
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=5 CMD [ "healthcheck" ]
