@@ -38,8 +38,6 @@ jobs:
           file: ./5.6/Dockerfile
           push: true
           platforms: linux/amd64,linux/arm/v7,linux/arm64
-          #platforms: linux/amd64,linux/arm/v7
-          #platforms: linux/amd64,linux/arm64
           tags: |
             bcgdesign/apache-php:dev
             bcgdesign/apache-php:dev-php-5.6
