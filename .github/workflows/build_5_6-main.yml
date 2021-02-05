@@ -9,6 +9,7 @@ on:
     paths:
       - '.github/workflows/build_5_6-main.yml'
       - '5.6/**'
+      - 'overlay/**'
       - 'VERSION'
 
 jobs:
