@@ -18,9 +18,9 @@ Based on [official PHP image](https://hub.docker.com/_/php/) for PHP 5.6.40 with
 
 ## Volumes
 
-| Volume             | Purpose                                                 |
-| ------------------ | ------------------------------------------------------- |
-| `/var/www/html/`   | *From base image: files are served from this directory* |
+| Volume             | Purpose                                                  |
+| ------------------ | -------------------------------------------------------- |
+| `/var/www/html/`   | *From base image: files are served from this directory.* |
 
 ## Authors
 
