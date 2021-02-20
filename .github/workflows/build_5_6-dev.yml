@@ -2,12 +2,12 @@ name: 5.6-dev
 
 on:
   push:
-    branches:
-      - '**'
+    branches-ignore:
+      - 'main'
     tags-ignore:
       - '**'
     paths:
-      - '.github/workflows/build_5_6-main.yml'
+      - '.github/workflows/build_5_6-dev.yml'
       - '5.6/**'
       - 'overlay/**'
       - 'VERSION'
