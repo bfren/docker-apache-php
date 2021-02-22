@@ -2,12 +2,12 @@ name: 5.6-dev
 
 on:
   push:
-    branches:
-      - '**'
+    branches-ignore:
+      - 'main'
     tags-ignore:
       - '**'
     paths:
-      - '.github/workflows/build_5_6-main.yml'
+      - '.github/workflows/build_5_6-dev.yml'
       - '5.6/**'
       - 'overlay/**'
       - 'VERSION'
@@ -19,6 +19,12 @@ jobs:
       -
         name: Checkout code
         uses: actions/checkout@v2
+      -
+        name: Read image version
+        uses: bencgreen/read-file-action@v1
+        with:
+          path: ./VERSION
+        id: version
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -43,6 +49,7 @@ jobs:
           tags: |
             bcgdesign/apache-php:dev
             bcgdesign/apache-php:dev-php-5.6
+            bcgdesign/apache-php:${{ steps.version.outputs.content }}
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
