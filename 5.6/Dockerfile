@@ -9,6 +9,7 @@ LABEL maintainer="Ben Green <ben@bcgdesign.com>" \
 RUN \
     a2enmod rewrite \
     && docker-php-ext-install mysql \
+    && apt update \
     && apt install wget
 
 COPY ./overlay /
