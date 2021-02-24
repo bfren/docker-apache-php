@@ -1,4 +1,4 @@
-name: 5.6-dev
+name: dev-5_6
 
 on:
   push:
@@ -7,13 +7,19 @@ on:
     tags-ignore:
       - '**'
     paths:
-      - '.github/workflows/build_5_6-dev.yml'
+      - '.github/workflows/dev-5_6.yml'
       - '5.6/**'
       - 'overlay/**'
       - 'VERSION'
 
 jobs:
-  build:
+  test-5_6:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Checkout code
+        uses: actions/checkout@v2
+  build-5_6:
     runs-on: ubuntu-latest
     steps:
       -

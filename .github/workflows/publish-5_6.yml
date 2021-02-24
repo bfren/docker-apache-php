@@ -1,4 +1,4 @@
-name: 5.6-main
+name: publish-5_6
 
 on:
   push:
@@ -7,13 +7,13 @@ on:
     tags-ignore:
       - '**'
     paths:
-      - '.github/workflows/build_5_6-main.yml'
+      - '.github/workflows/publish-5_6.yml'
       - '5.6/**'
       - 'overlay/**'
       - 'VERSION'
 
 jobs:
-  build:
+  publish-5_6:
     runs-on: ubuntu-latest
     steps:
       -
