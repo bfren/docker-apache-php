@@ -55,11 +55,11 @@ jobs:
           tags: |
             bcgdesign/apache-php:latest
             bcgdesign/apache-php:${{ steps.version.outputs.content }}
-            bcgdesign/apache-php:php-5
-            bcgdesign/apache-php:php-5-${{ steps.version.outputs.content }}
-            bcgdesign/apache-php:php-5.6
-            bcgdesign/apache-php:php-5.6-${{ steps.version.outputs.content }}
-            bcgdesign/apache-php:php-${{ steps.php_revision.outputs.content }}
+            bcgdesign/apache-php:php5
+            bcgdesign/apache-php:php5-${{ steps.version.outputs.content }}
+            bcgdesign/apache-php:php5.6
+            bcgdesign/apache-php:php5.6-${{ steps.version.outputs.content }}
+            bcgdesign/apache-php:php${{ steps.php_revision.outputs.content }}
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
