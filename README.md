@@ -28,7 +28,7 @@ Based on [official PHP image](https://hub.docker.com/_/php/) for PHP 5.6.40 with
 
 ## License
 
-> [MIT](https://bcg.mit-license.org/2020)
+> [MIT](https://mit.bcgdesign.com/2020)
 
 ## Copyright
 
