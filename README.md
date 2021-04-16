@@ -1,6 +1,7 @@
 # Docker Apache PHP
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/bencgreen/docker-apache-php) ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/bencgreen/docker-apache-php/dev-5_6?label=github+5.6) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/bcgdesign/apache-php?label=docker) ![Docker Pulls](https://img.shields.io/docker/pulls/bcgdesign/apache-php?label=pulls) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/bcgdesign/apache-php/latest?label=size)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/bencgreen/docker-apache-php) ![Docker Pulls](https://img.shields.io/docker/pulls/bcgdesign/apache-php?label=pulls) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/bcgdesign/apache-php/latest?label=size)<br/>
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/bencgreen/docker-apache-php/dev-5_6?label=PHP+5.6)
 
 [Docker Repository](https://hub.docker.com/r/bcgdesign/apache-php) - [bcg|design ecosystem](https://github.com/bencgreen/docker)
 
