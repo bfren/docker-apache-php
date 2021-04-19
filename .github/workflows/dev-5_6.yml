@@ -6,11 +6,6 @@ on:
       - 'main'
     tags-ignore:
       - '**'
-    paths:
-      - '.github/workflows/dev-5_6.yml'
-      - '5.6/**'
-      - 'overlay/**'
-      - 'VERSION'
   workflow_dispatch:
 
 jobs:
