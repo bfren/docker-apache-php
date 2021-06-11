@@ -14,13 +14,13 @@ jobs:
         uses: actions/checkout@v2
       -
         name: Read PHP version - revision
-        uses: bencgreen/read-file-action@v1
+        uses: bfren/read-file-action@v1
         with:
           path: ./5.6/PHP_REVISION
         id: php_revision
       -
         name: Read image version
-        uses: bencgreen/read-file-action@v1
+        uses: bfren/read-file-action@v1
         with:
           path: ./VERSION
         id: version
@@ -46,13 +46,13 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm/v7,linux/arm64
           tags: |
-            bcgdesign/apache-php:latest
-            bcgdesign/apache-php:${{ steps.version.outputs.content }}
-            bcgdesign/apache-php:php5
-            bcgdesign/apache-php:php5-${{ steps.version.outputs.content }}
-            bcgdesign/apache-php:php5.6
-            bcgdesign/apache-php:php5.6-${{ steps.version.outputs.content }}
-            bcgdesign/apache-php:php${{ steps.php_revision.outputs.content }}
+            bfren/apache-php:latest
+            bfren/apache-php:${{ steps.version.outputs.content }}
+            bfren/apache-php:php5
+            bfren/apache-php:php5-${{ steps.version.outputs.content }}
+            bfren/apache-php:php5.6
+            bfren/apache-php:php5.6-${{ steps.version.outputs.content }}
+            bfren/apache-php:php${{ steps.php_revision.outputs.content }}
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
