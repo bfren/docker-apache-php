@@ -1,9 +1,9 @@
 # Docker Apache PHP
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/bencgreen/docker-apache-php) ![Docker Pulls](https://img.shields.io/docker/pulls/bcgdesign/apache-php?label=pulls) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/bcgdesign/apache-php/latest?label=size)<br/>
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/bencgreen/docker-apache-php/dev-5_6?label=PHP+5.6)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/bfren/docker-apache-php) ![Docker Pulls](https://img.shields.io/docker/pulls/bcgdesign/apache-php?label=pulls) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/bcgdesign/apache-php/latest?label=size)<br/>
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/bfren/docker-apache-php/dev-5_6?label=PHP+5.6)
 
-[Docker Repository](https://hub.docker.com/r/bcgdesign/apache-php) - [bcg|design ecosystem](https://github.com/bencgreen/docker)
+[Docker Repository](https://hub.docker.com/r/bcgdesign/apache-php) - [bfren ecosystem](https://github.com/bfren/docker)
 
 Based on [official PHP image](https://hub.docker.com/_/php/) for PHP 5.6.40 with Apache, with `mysql` extension installed.
 
@@ -11,7 +11,7 @@ Based on [official PHP image](https://hub.docker.com/_/php/) for PHP 5.6.40 with
 
 * [Ports](#ports)
 * [Volumes](#volumes)
-* [Authors / Licence / Copyright](#authors)
+* [Licence / Copyright](#licence)
 
 ## Ports
 
@@ -23,15 +23,11 @@ Based on [official PHP image](https://hub.docker.com/_/php/) for PHP 5.6.40 with
 | ------------------ | -------------------------------------------------------- |
 | `/var/www/html/`   | *From base image: files are served from this directory.* |
 
-## Authors
+## Licence
 
-* [Ben Green](https://github.com/bencgreen)
-
-## License
-
-> [MIT](https://mit.bcgdesign.com/2020)
+> [MIT](https://mit.bfren.uk/2020)
 
 ## Copyright
 
-> Copyright (c) 2021 Ben Green <https://bcgdesign.com>
+> Copyright (c) 2021 bfren.uk
 > Unless otherwise stated
