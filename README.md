@@ -25,9 +25,9 @@ Based on [official PHP image](https://hub.docker.com/_/php/) for PHP 5.6.40 with
 
 ## Licence
 
-> [MIT](https://mit.bfren.uk/2020)
+> [MIT](https://mit.bfren.dev/2020)
 
 ## Copyright
 
-> Copyright (c) 2021 bfren.uk
+> Copyright (c) 2021 bfren
 > Unless otherwise stated
