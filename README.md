@@ -29,5 +29,4 @@ Based on [official PHP image](https://hub.docker.com/_/php/) for PHP 5.6.40 with
 
 ## Copyright
 
-> Copyright (c) 2021 bfren
-> Unless otherwise stated
+> Copyright (c) 2021 [bfren](https://bfren.dev) (unless otherwise stated)
