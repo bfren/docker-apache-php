@@ -5,23 +5,7 @@
 
 [Docker Repository](https://hub.docker.com/r/bfren/apache-php) - [bfren ecosystem](https://github.com/bfren/docker)
 
-Based on [official PHP image](https://hub.docker.com/_/php/) for PHP 5.6.40 with Apache, with `mysql` extension installed.
-
-## Contents
-
-* [Ports](#ports)
-* [Volumes](#volumes)
-* [Licence / Copyright](#licence)
-
-## Ports
-
-* 80
-
-## Volumes
-
-| Volume             | Purpose                                                  |
-| ------------------ | -------------------------------------------------------- |
-| `/var/www/html/`   | *From base image: files are served from this directory.* |
+[Documentation and Usage Guide](https://docs.bfren.dev/docker/base-images/apache-php)
 
 ## Licence
 
