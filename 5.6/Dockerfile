@@ -1,12 +1,10 @@
-FROM php:5.6.40-apache
+FROM bfren/apache:apache2.4.4x-2.0.4
 
-RUN \
-    a2enmod rewrite \
-    && docker-php-ext-install mysql \
-    && apt update \
-    && apt install wget
+ARG BF_IMAGE
+ARG BF_VERSION
 
 COPY ./overlay /
+COPY ./5.6/overlay /
+COPY ./5.6/PHP_BUILD /tmp/
 
-RUN chmod +x /usr/local/bin/healthcheck
-HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=5 CMD [ "healthcheck" ]
+RUN bf-install

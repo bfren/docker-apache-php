@@ -1,0 +1,10 @@
+FROM bfren/apache:<%= ${APACHE_BASE} %>-<%= ${BASE_REVISION} %>
+
+ARG BF_IMAGE
+ARG BF_VERSION
+
+COPY ./overlay /
+COPY ./<%= ${PHP_MINOR} %>/overlay /
+COPY ./<%= ${PHP_MINOR} %>/PHP_BUILD /tmp/
+
+RUN bf-install
