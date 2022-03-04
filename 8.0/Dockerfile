@@ -1,11 +1,11 @@
-FROM bfren/apache:apache2.4.4x-2.0.5
+FROM bfren/apache:apache2.4.5x-2.0.5
 
 ARG BF_IMAGE
 ARG BF_VERSION
 
 ENV \
     # PHP config directory
-    PHP_DIR=/etc/php5 \
+    PHP_DIR=/etc/php8 \
     # www.conf override: log_level
     PHP_FPM_LOG_LEVEL="notice" \
     # php.ini template to use
@@ -15,7 +15,7 @@ ENV \
     # php.ini override: display_startup_errors
     PHP_INI_DISPLAY_STARTUP_ERRORS= \
     # php.ini override: error_log
-    PHP_INI_ERROR_LOG="/var/log/php5/error.log" \
+    PHP_INI_ERROR_LOG="/var/log/php8/error.log" \
     # php.ini override: err-r_reporting
     PHP_INI_ERROR_REPORTING= \
     # php.ini override: memory_limit
@@ -28,7 +28,7 @@ ENV \
     PHP_SESSION_MAX_LIFETIME=86400
 
 COPY ./overlay /
-COPY ./5.6/overlay /
-COPY ./5.6/PHP_BUILD /tmp/
+COPY ./8.0/overlay /
+COPY ./8.0/PHP_BUILD /tmp/
 
 RUN bf-install
