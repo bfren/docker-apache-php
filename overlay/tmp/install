@@ -29,6 +29,7 @@ chmod +x ./install-php && ./install-php ${VERSION}
 bf-done
 
 bf-echo "Creating blank error log..."
+mkdir -p dirname ${PHP_INI_ERROR_LOG}
 touch ${PHP_INI_ERROR_LOG}
 bf-done
 
