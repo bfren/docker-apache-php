@@ -1,4 +1,4 @@
-LoadModule php_module modules/libphp.so
+LoadModule php8_module modules/libphp8.so
 
 <FilesMatch \.php$>
     SetHandler application/x-httpd-php
