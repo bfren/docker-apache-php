@@ -10,5 +10,3 @@ export BF_E=`basename ${0}`
 
 # Library configuration
 bf-env "PHP_LIB" "${BF_LIB}/php"
-
-bf-env "APACHE_CONF_D" "/etc/apache2/conf.d"

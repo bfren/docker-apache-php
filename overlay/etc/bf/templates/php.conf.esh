@@ -1,5 +1,0 @@
-LoadModule php_module modules/mod_php8.so
-
-<FilesMatch \.php$>
-    SetHandler application/x-httpd-php
-</FilesMatch>
