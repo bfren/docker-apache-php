@@ -9,6 +9,6 @@ export BF_E=`basename ${0}`
 #======================================================================================================================
 
 bf-echo "Creating PHP Apache2 configuration files..."
-PHP_CONF=php.conf
-bf-debug " .. ${PHP_CONF}"
-bf-esh ${BF_TEMPLATES}/${PHP_CONF}.esh ${APACHE_CONF_D}/${PHP_CONF}
+#PHP_CONF=php.conf
+#bf-debug " .. ${PHP_CONF}"
+#bf-esh ${BF_TEMPLATES}/${PHP_CONF}.esh ${APACHE_CONF_D}/${PHP_CONF}
