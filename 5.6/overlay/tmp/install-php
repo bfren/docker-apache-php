@@ -9,12 +9,5 @@ set -euo pipefail
 
 apk add --no-cache \
     php5=${1} \
-    php5-common=${1} \
-    php5-fpm=${1}
-
-
-#======================================================================================================================
-# Create symlink so PHP can be called on the commandline using php-fpm.
-#======================================================================================================================
-
-ln -s /usr/sbin/php-fpm5 /usr/sbin/php-fpm
+    php5-apache2=${1} \
+    php5-common=${1}
