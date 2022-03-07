@@ -1,4 +1,4 @@
-FROM bfren/apache:apache2.4.5x-2.0.5
+FROM bfren/apache:apache2.4.5x-2.0.8
 
 ARG BF_IMAGE
 ARG BF_VERSION
@@ -29,6 +29,5 @@ ENV \
 
 COPY ./overlay /
 COPY ./8.0/overlay /
-COPY ./8.0/PHP_BUILD /tmp/
 
 RUN bf-install

@@ -23,12 +23,6 @@ jobs:
           file: ./8.0/PHP_REVISION
         id: php_revision
       -
-        name: Read PHP version - build
-        uses: bfren/read-file@v1
-        with:
-          file: ./8.0/PHP_BUILD
-        id: php_build
-      -
         name: Read image version
         uses: bfren/read-file@v1
         with:
@@ -59,6 +53,13 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
+        name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      -
         name: Build and push
         id: docker_build
         uses: docker/build-push-action@v2
@@ -71,16 +72,24 @@ jobs:
           push: true
           platforms: linux/amd64,linux/arm/v7,linux/arm64
           tags: |
-            bfren/apache-php:php7
-            bfren/apache-php:php7-${{ steps.version_major.outputs.contents }}
-            bfren/apache-php:php7-${{ steps.version_minor.outputs.contents }}
-            bfren/apache-php:php7-${{ steps.version.outputs.contents }}
+            bfren/apache-php:php8
+            bfren/apache-php:php8-${{ steps.version_major.outputs.contents }}
+            bfren/apache-php:php8-${{ steps.version_minor.outputs.contents }}
+            bfren/apache-php:php8-${{ steps.version.outputs.contents }}
             bfren/apache-php:php8.0
             bfren/apache-php:php8.0-${{ steps.version_major.outputs.contents }}
             bfren/apache-php:php8.0-${{ steps.version_minor.outputs.contents }}
             bfren/apache-php:php8.0-${{ steps.version.outputs.contents }}
             bfren/apache-php:php${{ steps.php_revision.outputs.contents }}
-            bfren/apache-php:php${{ steps.php_build.outputs.contents }}
+            ghcr.io/bfren/apache-php:php8
+            ghcr.io/bfren/apache-php:php8-${{ steps.version_major.outputs.contents }}
+            ghcr.io/bfren/apache-php:php8-${{ steps.version_minor.outputs.contents }}
+            ghcr.io/bfren/apache-php:php8-${{ steps.version.outputs.contents }}
+            ghcr.io/bfren/apache-php:php8.0
+            ghcr.io/bfren/apache-php:php8.0-${{ steps.version_major.outputs.contents }}
+            ghcr.io/bfren/apache-php:php8.0-${{ steps.version_minor.outputs.contents }}
+            ghcr.io/bfren/apache-php:php8.0-${{ steps.version.outputs.contents }}
+            ghcr.io/bfren/apache-php:php${{ steps.php_revision.outputs.contents }}
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
