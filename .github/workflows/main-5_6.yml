@@ -74,6 +74,15 @@ jobs:
             bfren/apache-php:php5.6-${{ steps.version_minor.outputs.contents }}
             bfren/apache-php:php5.6-${{ steps.version.outputs.contents }}
             bfren/apache-php:php${{ steps.php_revision.outputs.contents }}
+            ghcr.io/bfren/apache-php:php5
+            ghcr.io/bfren/apache-php:php5-${{ steps.version_major.outputs.contents }}
+            ghcr.io/bfren/apache-php:php5-${{ steps.version_minor.outputs.contents }}
+            ghcr.io/bfren/apache-php:php5-${{ steps.version.outputs.contents }}
+            ghcr.io/bfren/apache-php:php5.6
+            ghcr.io/bfren/apache-php:php5.6-${{ steps.version_major.outputs.contents }}
+            ghcr.io/bfren/apache-php:php5.6-${{ steps.version_minor.outputs.contents }}
+            ghcr.io/bfren/apache-php:php5.6-${{ steps.version.outputs.contents }}
+            ghcr.io/bfren/apache-php:php${{ steps.php_revision.outputs.contents }}
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

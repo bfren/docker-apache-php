@@ -56,6 +56,8 @@ jobs:
           tags: |
             bfren/apache-php:php5.6-dev
             bfren/apache-php:php5.6-${{ steps.version.outputs.contents }}-beta
+            ghcr.io/bfren/apache-php:php5.6-dev
+            ghcr.io/bfren/apache-php:php5.6-${{ steps.version.outputs.contents }}-beta
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
