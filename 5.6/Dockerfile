@@ -1,4 +1,4 @@
-FROM bfren/apache:apache2.4.4x-2.0.8
+FROM bfren/apache:apache2.4.4x-2.1.0
 
 ARG BF_IMAGE
 ARG BF_VERSION
