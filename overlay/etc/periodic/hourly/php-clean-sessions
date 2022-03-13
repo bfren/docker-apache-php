@@ -5,7 +5,7 @@ export BF_E=`basename ${0}`
 
 
 #======================================================================================================================
-# Run clean-sessions executable.
+# Call php-clean-sessions executable.
 #======================================================================================================================
 
-s6-setuidgid apache ${PHP_LIB}/clean-sessions
+php-clean-sessions
