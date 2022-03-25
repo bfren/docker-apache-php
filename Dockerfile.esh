@@ -1,5 +1,7 @@
 FROM bfren/apache:<%= ${APACHE_BASE} %>-<%= ${BASE_REVISION} %>
 
+LABEL org.opencontainers.image.source="https://github.com/bfren/docker-apache-php"
+
 ARG BF_IMAGE
 ARG BF_VERSION
 
