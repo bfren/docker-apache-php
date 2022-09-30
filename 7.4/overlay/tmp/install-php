@@ -8,7 +8,7 @@ set -euo pipefail
 #======================================================================================================================
 
 apk add --no-cache \
-    php7@edgetest=${1} \
-    php7-apache2@edgetest=${1} \
-    php7-common@edgetest=${1} \
-    php7-session@edgetest=${1}
+    php7=${1} \
+    php7-apache2=${1} \
+    php7-common=${1} \
+    php7-session=${1}
