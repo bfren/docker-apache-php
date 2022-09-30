@@ -31,6 +31,6 @@ ENV \
     PHP_SESSION_MAX_LIFETIME=86400
 
 COPY ./overlay /
-COPY ./8.0/overlay /
+COPY ./8.1/overlay /
 
 RUN bf-install
