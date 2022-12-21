@@ -6,6 +6,13 @@
 
 [Documentation and Usage Guide](https://docs.bfren.dev/docker/base-images/apache-php)
 
+Apache2 plus PHP (5.6, 7.4, 8.0, 8.1 and 8.2) - no SSL support etc, designed to be used behind a proxy server.  Minimal PHP packages are installed:
+
+* `php`
+* `php-apache2`
+* `php-common`
+* `php-session`
+
 ## Licence
 
 > [MIT](https://mit.bfren.dev/2020)
