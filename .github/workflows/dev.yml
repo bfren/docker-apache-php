@@ -67,8 +67,6 @@ jobs:
           tags: |
             bfren/apache-php:php${{ matrix.php }}-dev
             bfren/apache-php:php${{ matrix.php }}-${{ steps.version.outputs.contents }}-beta
-            ghcr.io/bfren/apache-php:php${{ matrix.php }}-dev
-            ghcr.io/bfren/apache-php:php${{ matrix.php }}-${{ steps.version.outputs.contents }}-beta
       -
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
