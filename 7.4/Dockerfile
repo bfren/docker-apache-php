@@ -1,4 +1,4 @@
-FROM bfren/apache:apache2.4.57-alpine3.17-3.0.0
+FROM bfren/apache:apache2.4.56-alpine3.15-3.0.0
 
 LABEL org.opencontainers.image.source="https://github.com/bfren/docker-apache-php"
 
@@ -7,7 +7,7 @@ ARG BF_VERSION
 
 ENV \
     # PHP config directory
-    PHP_DIR=/etc/php8 \
+    PHP_DIR=/etc/php7 \
     # www.conf override: log_level
     PHP_FPM_LOG_LEVEL="notice" \
     # php.ini template to use, or 'custom' if you want to bind your own custom php.ini -
@@ -18,7 +18,7 @@ ENV \
     # php.ini override: display_startup_errors
     PHP_INI_DISPLAY_STARTUP_ERRORS= \
     # php.ini override: error_log
-    PHP_INI_ERROR_LOG="/var/log/php8/error.log" \
+    PHP_INI_ERROR_LOG="/var/log/php7/error.log" \
     # php.ini override: err-r_reporting
     PHP_INI_ERROR_REPORTING= \
     # php.ini override: memory_limit
@@ -31,6 +31,6 @@ ENV \
     PHP_SESSION_MAX_LIFETIME=86400
 
 COPY ./overlay /
-COPY ./8.1/overlay /
+COPY ./7.4/overlay /
 
 RUN bf-install

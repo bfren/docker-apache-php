@@ -1,4 +1,4 @@
-FROM bfren/apache:apache2.4.4x-2.2.31
+FROM bfren/apache:apache2.4.43-alpine3.8-3.0.0
 
 LABEL org.opencontainers.image.source="https://github.com/bfren/docker-apache-php"
 
