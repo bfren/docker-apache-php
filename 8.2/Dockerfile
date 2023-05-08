@@ -1,4 +1,4 @@
-FROM bfren/apache:apache2.4.57-alpine3.17-3.0.0
+FROM bfren/apache:apache2.4.57-alpineedge-3.0.0
 
 LABEL org.opencontainers.image.source="https://github.com/bfren/docker-apache-php"
 
@@ -31,6 +31,6 @@ ENV \
     PHP_SESSION_MAX_LIFETIME=86400
 
 COPY ./overlay /
-COPY ./8.1/overlay /
+COPY ./8.2/overlay /
 
 RUN bf-install
