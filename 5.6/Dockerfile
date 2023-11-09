@@ -5,6 +5,9 @@ LABEL org.opencontainers.image.source="https://github.com/bfren/docker-apache-ph
 ARG BF_IMAGE
 ARG BF_VERSION
 
+COPY ./overlay /
+COPY ./5.6/overlay /
+
 ENV \
     # PHP config directory
     PHP_DIR=/etc/php5 \
@@ -29,8 +32,5 @@ ENV \
     PHP_INI_MAX_UPLOAD="64M" \
     # php.ini override: session_max_lifetime
     PHP_SESSION_MAX_LIFETIME=86400
-
-COPY ./overlay /
-COPY ./5.6/overlay /
 
 RUN bf-install

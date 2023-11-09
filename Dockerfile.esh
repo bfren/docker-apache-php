@@ -1,9 +1,12 @@
-FROM bfren/apache:<%= ${APACHE_BASE} %>-<%= ${BASE_REVISION} %>
+FROM bfren/apache:<%= ${APACHE_BASE} %>-<%= ${BASE_VERSION} %>
 
 LABEL org.opencontainers.image.source="https://github.com/bfren/docker-apache-php"
 
 ARG BF_IMAGE
 ARG BF_VERSION
+
+COPY ./overlay /
+COPY ./<%= ${PHP_MINOR} %>/overlay /
 
 ENV \
     # PHP config directory
@@ -29,8 +32,5 @@ ENV \
     PHP_INI_MAX_UPLOAD="64M" \
     # php.ini override: session_max_lifetime
     PHP_SESSION_MAX_LIFETIME=86400
-
-COPY ./overlay /
-COPY ./<%= ${PHP_MINOR} %>/overlay /
 
 RUN bf-install
