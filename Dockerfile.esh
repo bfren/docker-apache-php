@@ -1,4 +1,4 @@
-FROM bfren/apache:<%= ${APACHE_BASE} %>-<%= ${BASE_VERSION} %>
+FROM quay.io/bfren/apache:<%= ${APACHE_BASE} %>-<%= ${BASE_VERSION} %>
 
 LABEL org.opencontainers.image.source="https://github.com/bfren/docker-apache-php"
 
