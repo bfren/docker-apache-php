@@ -17,7 +17,7 @@ if [ "${PHP_INI}" = "development" ] || [ "${PHP_INI}" = "production" ] ; then
 
     URL="https://raw.githubusercontent.com/php/php-src/master/php.ini-${PHP_INI}"
     bf-echo "Downloading php.ini from ${URL}..."
-    wget -O ${PHP_DIR}/php.ini ${URL} \
+    bf-wget -O ${PHP_DIR}/php.ini ${URL} \
         && touch ${DOWNLOADED}
     exit 0
 
