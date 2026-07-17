@@ -19,4 +19,4 @@ Apache2 plus PHP (5.6, 7.4, 8.0, 8.1 and 8.2) - no SSL support etc, designed to 
 
 ## Copyright
 
-> Copyright (c) 2020-2023 [bfren](https://bfren.dev) (unless otherwise stated)
+> Copyright (c) 2020-2024 [bfren](https://bfren.dev) (unless otherwise stated)
