@@ -1,9 +1,12 @@
-FROM bfren/apache:apache2.4.43-alpine3.8-3.0.10
+FROM quay.io/bfren/apache:apache2.4.43-alpine3.8-3.0.10
 
 LABEL org.opencontainers.image.source="https://github.com/bfren/docker-apache-php"
 
 ARG BF_IMAGE
 ARG BF_VERSION
+
+COPY ./overlay /
+COPY ./5.6/overlay /
 
 ENV \
     # PHP config directory
@@ -29,8 +32,5 @@ ENV \
     PHP_INI_MAX_UPLOAD="64M" \
     # php.ini override: session_max_lifetime
     PHP_SESSION_MAX_LIFETIME=86400
-
-COPY ./overlay /
-COPY ./5.6/overlay /
 
 RUN bf-install
